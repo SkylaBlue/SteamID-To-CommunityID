@@ -14,12 +14,12 @@ splitID    = SteamID.split(":")
 
 Universe   = int(splitID[1])
 # User entered a SteamID with a universe greater than one, which is basically impossible
-if len(Universe) > 1:
+if Universe > 1:
     print "Please use a valid steam id!"
     
 LastDigits = int(splitID[2])*2
 # User entered a SteamID with an id less than 1, which is impossible
-if len(LastDigits) < 1:
+if LastDigits < 1:
     print "Please use a valid steam id!"
 
 # Valve uses 0x0110000100000000 as the SteamID64 identifier  
